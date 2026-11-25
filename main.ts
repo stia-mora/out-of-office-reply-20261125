@@ -34,6 +34,13 @@
 //
 // Verdict: B wins — fastest punchline, freshest twist, tightest wording.
 //
+// Second pass (revision): tightened B further. "has been forwarded" ->
+// "was forwarded" (one word saved, same meaning), and "which is also on
+// holiday" -> "which took one look and went on holiday too". The reply
+// now does something — it reads the email and flees — so the punchline
+// is an action, not a restatement, and "took one look" gives the joke a
+// second beat on re-reading.
+//
 // This program is fully deterministic: no randomness, no clock, no
 // network, no environment reads. It writes exactly the chosen line to
 // /output/entry.txt.
@@ -42,7 +49,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const LINE =
-  "I'm on holiday. Your email has been forwarded to my out-of-office reply, which is also on holiday.";
+  "I'm on holiday. Your email was forwarded to my out-of-office reply, which took one look and went on holiday too.";
 
 const OUTPUT_DIR = "/output";
 const OUTPUT_FILE = join(OUTPUT_DIR, "entry.txt");
